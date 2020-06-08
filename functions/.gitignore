@@ -1,0 +1,10 @@
+## Compiled JavaScript files
+**/*.js
+!/build.js
+**/*.js.map
+
+# Typescript v1 declaration files
+typings/
+lib/
+node_modules/
+/src/shared/google-services.json

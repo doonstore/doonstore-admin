@@ -1,0 +1,22 @@
+name: Build and Test
+on:
+  pull_request:
+    branches:
+      - master
+jobs:
+    voter:
+        name: Build and Test
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/setup-node@v1
+              with:
+                node-version: 12
+            - name: write google-services.json
+              run: echo "$GOOGLE_SERVICES_JSON" > functions/src/shared/google-services.json
+              env:
+                GOOGLE_SERVICES_JSON: ${{ secrets.GOOGLE_SERVICES_JSON }}
+            - name: build project
+              run: cd functions && npm i && npm run build && cd ..
+            - name: lint using gts
+              run: cd functions && npm i && ./node_modules/.bin/gts check src/**/*.ts && cd ..
