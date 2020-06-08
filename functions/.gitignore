@@ -7,3 +7,4 @@
 typings/
 lib/
 node_modules/
+/src/shared/google-services.json
