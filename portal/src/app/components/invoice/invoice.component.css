@@ -1,0 +1,46 @@
+table {
+    width: 100%;
+}
+
+td {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+.t-right-align {
+    text-align: right;
+}
+
+.t-center-align {
+    text-align: center;
+}
+
+.t-id-column {
+    width: 8%;
+}
+
+.t-price-column {
+    width: 8%;
+}
+
+.t-quantity-column {
+    width: 10%;
+}
+
+.t-item-column {
+    width: 66%;
+}
+
+@media print {
+    button {
+        display: none !important;
+    }
+
+    div.cdk-overlay-pane {
+        width: 100% !important;
+    }
+
+    div.cdk-overlay-backdrop {
+        display: none !important;
+    }
+}
