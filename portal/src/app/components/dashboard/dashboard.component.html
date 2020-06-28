@@ -1,0 +1,14 @@
+<mat-toolbar>
+    <span>DoonStore Admin</span>
+    <span style="flex: 1 1 auto"></span>
+    <button mat-stroked-button color="primary" style="margin-right: 10px">
+        <mat-icon>person</mat-icon>
+        {{authService.userData?.displayName}}
+    </button>
+    <button mat-stroked-button color="warn" (click)="authService.SignOut()" style="margin-right: 30px">
+        <mat-icon>logout</mat-icon>
+        Sign Out
+    </button>
+</mat-toolbar>
+
+<app-order-list></app-order-list>
