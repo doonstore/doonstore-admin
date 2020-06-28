@@ -13,7 +13,7 @@ jobs:
               with:
                 node-version: 12
             - name: write google-services.json
-              run: echo "$GOOGLE_SERVICES_JSON" > portal/src/environment/google-services.json
+              run: echo "$GOOGLE_SERVICES_JSON" > portal/src/environments/google-services.json
               env:
                 GOOGLE_SERVICES_JSON: ${{ secrets.GOOGLE_SERVICES_JSON }}
             - name: build project
