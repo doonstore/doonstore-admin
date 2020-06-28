@@ -17,7 +17,7 @@ jobs:
               env:
                 GOOGLE_SERVICES_JSON: ${{ secrets.GOOGLE_SERVICES_JSON }}
             - name: build project
-              run: ccd portal && npm i && ng build && cd ..
+              run: cd portal && npm i && npm run build && cd ..
             - name: deploy to gCloud
               uses: w9jds/firebase-action@master
               with:
